@@ -1,0 +1,18 @@
+#include "stdafx.h"
+
+int search_center(int& a, int& b, float& k,float * mas)
+{
+	//int center = int(ceill( ((a+b)/2) ));
+	int center = int((a+b)/D);//int(ceill(static_cast<double>(a+b) / D));
+	
+
+	if (k == mas[center])
+	{	a = b =center;	
+		return 1;
+	}
+	else if (k < mas[center])
+			b = int((a+b)/D);
+	else if (k > mas[center])
+			a = int(ceill(static_cast<double>(a+b) / D));
+	return 0;
+}
