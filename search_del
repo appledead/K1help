@@ -2,11 +2,11 @@
 
 int search_delenie(float * arr, float k, int a, int b)
 {
-	while (a!=b)
+	while (a!=b) //пока из фун-ии нам не вернутся одинаковые границы
 	{
 		if(search_center(a,b,k,arr))
 			return a;
 	}
 	
-	return -1;
+	return -1; //не нашли такого числа
 }
