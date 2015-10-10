@@ -1,0 +1,19 @@
+#include "stdafx.h"
+
+void main()
+{
+	float arr[N] = {0,2,3,4,5,6,7,8,9,10};
+	int a=0, b=N,k;
+	cin >> k;
+	k=search_delenie(arr,k,a,b);
+	if (k==-1)
+	{
+		cout<< "Извините, но в данном массиве нет этого числа"<<endl;
+		_getch();	
+		return;
+	}
+	cout << "Place: " <<k<<endl;
+	cout << "Word: " <<arr[k];
+
+	_getch();
+}
